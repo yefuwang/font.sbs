@@ -3,3 +3,5 @@ venv
 *.ttf
 *.woff
 *.woff2
+*.sfd
+*.afm
