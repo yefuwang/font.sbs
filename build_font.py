@@ -11,9 +11,12 @@ for p in svgFilePaths:
 	glyph.importOutlines(str(p))
 
 
-name = 'sbsslim'
-font.fontname = name
-font.fullname = name
+name = 'SbsSlim'
+
+# How to set the font name? http://lk4.us/fLbY4
+font.fontname = f"{name}-Regular"
+font.fullname = f"{name} Regular"
+font.familyname = f"{name}"
 font.save('output.sfd')
 
 font.generate(f'{name}.otf')
