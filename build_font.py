@@ -23,3 +23,16 @@ font.generate(f'{name}.otf')
 font.generate(f'{name}.ttf')
 font.generate(f'{name}.woff')
 font.generate(f'{name}.woff2')
+
+# print samples
+fontforge.printSetup('pdf-file', 'z.pdf', 600, 200)
+font.selection.select(("unicode","ranges"),ord('A'),ord('Z'))
+font.printSample('fontdisplay', (12, 16, 24, 36), 'abcdefABCDEF', 'sample.pdf')
+
+from pdf2image import convert_from_path
+ 
+ 
+# Store Pdf with convert_from_path function
+images = convert_from_path('sample.pdf')
+for i in range(len(images)):
+    images[i].save('page'+ str(i) +'.jpg', 'JPEG')
