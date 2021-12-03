@@ -10,9 +10,11 @@ for p in svgFilePaths:
 	glyph = font.createChar(int(dec))
 	glyph.importOutlines(str(p))
 
-font.save('output.sfd')
 
-name = 'sbsthin'
+name = 'sbsslim'
+font.fontname = name
+font.fullname = name
+font.save('output.sfd')
 
 font.generate(f'{name}.otf')
 font.generate(f'{name}.ttf')

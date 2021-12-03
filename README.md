@@ -11,19 +11,26 @@ This font is intended to be a coding font for software engineers. The following 
 
 ## Why it is named as sbs.slim?
 
-Because the author bought the domain name https://font.sbs
+Because the author bought the domain name https://font.sbs, which will be the domain to release this font once it finishes. The domain extension .sbs means "side-by-side", which fits the concept of this font well.
 
 
-## Technical Stack
+## Technical stack
 
 * Use Adobe Illustrator to draw each glyph and export to SVG format.
 * Store them under the SVG folder. Each glyph shall be named as [ASCII code][space][description].svg. Only the ASCII code part is significant in font generation. For example, the glyph for A shall be named as "65 A.svg"
-* Push the files to this repository. A github action will kick in and run a script to generate the font files (ttf, otf, woff, woff2). The script (build_font.py) is written in python and uses a python library invoking fontforge to generate the font files. (under development at the moment).
+* Push the files to this repository. A github action will kick in and run a script to generate the font files (ttf, otf, woff, woff2). The script (build_font.py) is written in python and uses a python library invoking [fontforge](https://fontforge.org/docs/index.html) to generate the font files. (under development at the moment).
+
+## Progress
+
+Currently, the files in this repository is only to demonstrate the feasibility of the technology. None of the glyphs in the SVG folder is my work (they are from [here](https://github.com/tomchen/font-template)). 
 
 ## Future work
 
-Finish the full font with some emojis important for software development.
+The repository will be updated with my real work before the class ends on 12//17/2021.
 
+Also before the end of the class, I will write a script to automatically deploy this font to its website at https://font.sbs when I commit changes to the glyphs.
+
+Some time after the end of the class, I will finish the full font with some emojis important for software development.
 
 ## References
 
