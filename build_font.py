@@ -29,7 +29,11 @@ font.generate(f'{name}.woff2')
 # print samples
 fontforge.printSetup('pdf-file', 'z.pdf', 600, 200)
 font.selection.select(("unicode","ranges"),ord('A'),ord('Z'))
-font.printSample('fontsample', (12, 16, 24, 36), 'abcdefghijklmnokqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\n1lI\noO0', 'sample.pdf')
+sample_text = """abcdefghijklmnokqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1lI oO0 1234567890 .,:;!?'"
+%*+-=~<>/\(){}
+"""
+font.printSample('fontsample', (12, 16, 24, 36), sample_text, 'sample.pdf')
 
 from pdf2image import convert_from_path
  
