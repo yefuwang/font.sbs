@@ -32,6 +32,21 @@ font.selection.select(("unicode","ranges"),ord('A'),ord('Z'))
 sample_text = """abcdefghijklmnokqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ
 1lI oO0 1234567890 .,:;!?'"
 %*+-=~<>/\(){}
+   6
+AAA6
+import fontforge
+from pathlib import Path
+
+font = fontforge.font() # new font
+
+svgFilePaths = list(Path('SVG').glob('**/*.svg'))
+
+for p in svgFilePaths:
+	dec = p.stem.split(" ", 1)[0]
+	glyph = font.createChar(int(dec))
+	glyph.importOutlines(str(p))
+	glyph.left_side_bearing=60
+	glyph.right_side_bearing=60
 """
 font.printSample('fontsample', (12, 16, 24, 36), sample_text, 'sample.pdf')
 

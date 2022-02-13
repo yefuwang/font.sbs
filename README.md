@@ -1,6 +1,6 @@
 # sbs.slim font
 
-In its current state, sbs.slim is a project for DMA 65 at Irvine Valley College. The author intends to continue this work after the course completes.
+The font sbs.slim started as a project for DMA 65 at Irvine Valley College. The author continues with the work as part of DMA 91 (Portfolio Development). The development work is unfinished at this time.
 
 ## Design Principles
 
@@ -18,19 +18,11 @@ Because the author bought the domain name https://font.sbs, which will be the do
 
 * Use Adobe Illustrator to draw each glyph and export to SVG format.
 * Store them under the SVG folder. Each glyph shall be named as [ASCII code][space][description].svg. Only the ASCII code part is significant in font generation. For example, the glyph for A shall be named as "65 A.svg"
-* Push the files to this repository. A github action will kick in and run a script to generate the font files (ttf, otf, woff, woff2). The script (build_font.py) is written in python and uses a python library invoking [fontforge](https://fontforge.org/docs/index.html) to generate the font files. (under development at the moment).
+* Push the files to this repository. A github action will kick in and run a script to generate the font files (ttf, otf, woff, woff2). The script (build_font.py) is written in python and uses a python library invoking [fontforge](https://fontforge.org/docs/index.html) to generate the font files.
 
 ## Progress
 
-Currently, the files in this repository is only to demonstrate the feasibility of the technology. None of the glyphs in the SVG folder is my work (they are from [here](https://github.com/tomchen/font-template)). 
-
-## Future work
-
-The repository will be updated with my real work before the class ends on 12//17/2021.
-
-Also before the end of the class, I will write a script to automatically deploy this font to its website at https://font.sbs when I commit changes to the glyphs.
-
-Some time after the end of the class, I will finish the full font with some emojis important for software development.
+Currently, all the letters and the most common symbols are developed.
 
 ## References
 
