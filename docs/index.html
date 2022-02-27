@@ -3,28 +3,486 @@
 <head>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script src="https://kit.fontawesome.com/feb006b656.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
 
 </head>
-<body>
-    <pre><code class="language-c++">
 
-// C++ program to display "Hello World"
- 
-// Header file for input output functions
-#include <iostream>
-using namespace std;
- 
-// Main() function: where the execution of program begins
-int main()
-{
-    // prints hello world
-    cout << "Hello World";
- 
-    return 0;
+<body>
+
+    <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="display-4 font-weight-normal">SBS Slim Font</h1>
+            <p class="lead font-weight-normal">
+                A coding font designed by a software engineer. Produced with <i class="fa-solid fa-heart"></i> by <a
+                    href="https://yefuwang.com" >Yefu Wang</a>.
+            </p>
+            <a class="btn btn-outline-secondary" href="https://github.com/yefuwang/font.sbs/releases"><i
+                    class="fa-brands fa-github"></i> Download</a>
+        </div>
+        <div class="product-device box-shadow d-none d-md-block"></div>
+        <div class="product-device product-device-2 box-shadow d-none d-md-block"></div>
+    </div>
+
+    <h1>
+        Design Principles
+    </h1>
+
+    <div>
+        <p>This font is intended to be a coding font for software engineers. The following design choices are made: </p>
+
+        <ul>
+            <li>The font should be extremely narrow to allow putting 3 or even 4 columns of code on a common 1080p
+                screen. </li>
+            <li>The font may not be considered legible or beautiful for all audience. Because source codes are not
+                intended to be shared with a fixed typeface, this font is considered successful if a small percentage of
+                users consider it useful. </li>
+        </ul>
+    </div>
+
+    <h1>See it in action</h1>
+
+    <div id="example">
+
+        <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                  Bash
+                </div>
+                <div class="card-body">
+                    <pre><code class="language-bash">
+#!/bin/bash
+
+###### CONFIG
+ACCEPTED_HOSTS=&quot;/root/.hag_accepted.conf&quot;
+BE_VERBOSE=false
+
+if [ &quot;$UID&quot; -ne 0 ]
+then
+echo &quot;Superuser rights required&quot;
+exit 2
+fi
+
+genApacheConf(){
+echo -e &quot;# Host ${HOME_DIR}$1/$2 :&quot;
 }
-    </code></pre>
+
+echo &#39;&quot;quoted&quot;&#39; | tr -d \&quot; &gt; text.txt
+                        </code></pre>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+          <div class="col-sm">
+            <div class="card">
+                <div class="card-header">
+                  Featured
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Special title treatment</h5>
+                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+        <div class="common all">
+            <h2>Bash</h2>
+
+        </div>
+
+        <div class="common all">
+            <h2>C#</h2>
+            <pre><code class="language-csharp">using System.IO.Compression;
+
+#pragma warning disable 414, 3021
+
+namespace MyApplication
+{
+[Obsolete(&quot;...&quot;)]
+class Program : IInterface
+{
+    public static List&lt;int&gt; JustDoIt(int count)
+    {
+        Span&lt;int&gt; numbers = stackalloc int[length];
+        Console.WriteLine($&quot;Hello {Name}!&quot;);
+        return new List&lt;int&gt;(new int[] { 1, 2, 3 })
+    }
+}
+}
+</code></pre>
+        </div>
+
+        <div class="common css web all">
+            <h2>CSS</h2>
+            <pre><code class="language-css">@font-face {
+font-family: Chunkfive; src: url(&#39;Chunkfive.otf&#39;);
+}
+
+body, .usertext {
+color: #F0F0F0; background: #600;
+font-family: Chunkfive, sans;
+--heading-1: 30px/32px Helvetica, sans-serif;
+}
+
+@import url(print.css);
+@media print {
+a[href^=http]::after {
+content: attr(href)
+}
+}
+</code></pre>
+        </div>
+
+        <div class="common markup all">
+            <h2>Markdown</h2>
+            <pre><code class="language-markdown"># hello world
+
+you can write text [with links](http://example.com) inline or [link references][1].
+
+* one _thing_ has *em*phasis
+* two __things__ are **bold**
+
+[1]: http://example.com
+
+---
+
+hello world
+===========
+
+&lt;this_is inline=&quot;xml&quot;&gt;&lt;/this_is&gt;
+
+&gt; markdown is so cool
+
+so are code segments
+
+1. one thing (yeah!)
+2. two thing `i can write code`, and `more` wipee!
+
+</code></pre>
+        </div>
+
+
+        <div class="common all">
+            <h2>Diff</h2>
+            <pre><code class="language-diff">Index: languages/ini.js
+===================================================================
+--- languages/ini.js    (revision 199)
++++ languages/ini.js    (revision 200)
+@@ -1,8 +1,7 @@
+hljs.LANGUAGES.ini =
+{
+case_insensitive: true,
+-  defaultMode:
+-  {
++  defaultMode: {
+ contains: [&#39;comment&#39;, &#39;title&#39;, &#39;setting&#39;],
+ illegal: &#39;[^\\s]&#39;
+},
+
+*** /path/to/original timestamp
+--- /path/to/new      timestamp
+***************
+*** 1,3 ****
+--- 1,9 ----
++ This is an important
++ notice! It should
++ therefore be located at
++ the beginning of this
++ document!
+
+! compress the size of the
+! changes.
+
+It is important to spell
+</code></pre>
+        </div>
+
+
+
+        <div class="common all">
+            <h2>Ruby</h2>
+            <pre><code class="language-ruby"># The Greeter class
+class Greeter
+def initialize(name)
+@name = name.capitalize
+end
+
+def salute
+puts &quot;Hello #{@name}!&quot;
+end
+end
+
+g = Greeter.new(&quot;world&quot;)
+g.salute
+</code></pre>
+        </div>
+
+
+
+        <div class="common system all">
+            <h2>Go</h2>
+            <pre><code class="language-go">package main
+
+import &quot;fmt&quot;
+
+func main() {
+ch := make(chan float64)
+ch &lt;- 1.0e10    // magic number
+x, ok := &lt;- ch
+defer fmt.Println(`exitting now\`)
+go println(len(&quot;hello world!&quot;))
+return
+}
+</code></pre>
+        </div>
+
+
+        <div class="common config all">
+            <h2>TOML, also INI</h2>
+            <pre><code class="language-ini">; boilerplate
+[package]
+name = &quot;some_name&quot;
+authors = [&quot;Author&quot;]
+description = &quot;This is \
+a description&quot;
+
+[[lib]]
+name = ${NAME}
+default = True
+auto = no
+counter = 1_000
+</code></pre>
+        </div>
+
+
+        <div class="common enterprise all">
+            <h2>Java</h2>
+            <pre><code class="language-java">/**
+* @author John Smith &lt;john.smith@example.com&gt;
+*/
+package l2f.gameserver.model;
+
+public abstract strictfp class L2Char extends L2Object {
+public static final Short ERROR = 0x0001;
+
+public void moveTo(int x, int y, int z) {
+_ai = null;
+log(&quot;Should not be called&quot;);
+if (1 &gt; 5) { // wtf!?
+  return;
+}
+}
+}
+</code></pre>
+        </div>
+
+        <div class="common scripting web all">
+            <h2>JavaScript</h2>
+            <pre><code class="language-javascript">function $initHighlight(block, cls) {
+try {
+if (cls.search(/\bno\-highlight\b/) != -1)
+  return process(block, true, 0x0F) +
+         ` class=&quot;${cls}&quot;`;
+} catch (e) {
+/* handle exception */
+}
+for (var i = 0 / 2; i &lt; classes.length; i++) {
+if (checkCondition(classes[i]) === undefined)
+  console.log(&#39;undefined&#39;);
+}
+
+return (
+&lt;div&gt;
+  &lt;web-component&gt;{block}&lt;/web-component&gt;
+&lt;/div&gt;
+)
+}
+
+export  $initHighlight;
+</code></pre>
+        </div>
+
+
+        <div class="common protocols web all">
+            <h2>JSON</h2>
+            <pre><code class="language-json">[
+{
+&quot;title&quot;: &quot;apples&quot;,
+&quot;count&quot;: [12000, 20000],
+&quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+},
+{
+&quot;title&quot;: &quot;oranges&quot;,
+&quot;count&quot;: [17500, null],
+&quot;description&quot;: {&quot;text&quot;: &quot;...&quot;, &quot;sensitive&quot;: false}
+}
+]
+</code></pre>
+        </div>
+
+        <div class="common all">
+            <h2>Kotlin</h2>
+            <pre><code class="language-kotlin">import kotlinx.serialization.Serializable
+import kotlin.random.Random
+
+interface Building
+
+@Serializable
+class House(
+private val rooms: Int? = 3,
+val name: String = &quot;Palace&quot;
+) : Building {
+var residents: Int = 4
+    get() {
+        println(&quot;Current residents: $field&quot;)
+        return field
+    }
+
+fun burn(evacuation: (people: Int) -&gt; Boolean) {
+    rooms ?: return
+    if (evacuation((0..residents).random()))
+        residents = 0
+}
+}
+
+fun main() {
+val house = House(name = &quot;Skyscraper 1&quot;)
+house.burn {
+    Random.nextBoolean()
+}
+}
+</code></pre>
+        </div>
+
+
+
+
+        <div class="common css web all">
+            <h2>Less</h2>
+            <pre><code class="language-less">@import &quot;fruits&quot;;
+
+@rhythm: 1.5em;
+
+@media screen and (min-resolution: 2dppx) {
+body {font-size: 125%}
+}
+
+section &gt; .foo + #bar:hover [href*=&quot;less&quot;] {
+margin:     @rhythm 0 0 @rhythm;
+padding:    calc(5% + 20px);
+background: #f00ba7 url(http://placehold.alpha-centauri/42.png) no-repeat;
+background-image: linear-gradient(-135deg, wheat, fuchsia) !important ;
+background-blend-mode: multiply;
+}
+
+@font-face {
+font-family: /* ? */ &#39;Omega&#39;;
+src: url(&#39;../fonts/omega-webfont.woff?v=2.0.2&#39;);
+}
+
+.icon-baz::before {
+display:     inline-block;
+font-family: &quot;Omega&quot;, Alpha, sans-serif;
+content:     &quot;\f085&quot;;
+color:       rgba(98, 76 /* or 54 */, 231, .75);
+}
+</code></pre>
+        </div>
+
+
+
+        <div class="common scripting all">
+            <h2>Lua</h2>
+            <pre><code class="language-lua">--[[
+Simple signal/slot implementation
+]]
+local signal_mt = {
+__index = {
+    register = table.insert
+}
+}
+function signal_mt.__index:emit(... --[[ Comment in params ]])
+for _, slot in ipairs(self) do
+    slot(self, ...)
+end
+end
+local function create_signal()
+return setmetatable({}, signal_mt)
+end
+
+-- Signal test
+local signal = create_signal()
+signal:register(function(signal, ...)
+print(...)
+end)
+signal:emit(&#39;Answer to Life, the Universe, and Everything:&#39;, 42)
+
+--[==[ [=[ [[
+Nested ]]
+multi-line ]=]
+comment ]==]
+[==[ Nested
+[=[ multi-line
+[[ string
+]] ]=] ]==]
+</code></pre>
+        </div>
+
+        <div class="common all">
+            <h2>Makefile</h2>
+            <pre><code class="language-makefile"># Makefile
+
+BUILDDIR      = _build
+EXTRAS       ?= $(BUILDDIR)/extras
+
+.PHONY: main clean
+
+main:
+@echo &quot;Building main facility...&quot;
+build_main $(BUILDDIR)
+
+clean:
+rm -rf $(BUILDDIR)/*
+</code></pre>
+        </div>
+
+    </div>
+
+
 </body>
 
 </html>
