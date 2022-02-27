@@ -21,6 +21,14 @@ jobs:
         run: docker build . -t tt
       - name: Generate font
         run: docker run  -v ${PWD}:/font  tt
+      - name: Update website
+        run: |
+          git config --global user.name 'Yefu Wang'
+          git config --global user.email 'yefuwang@users.noreply.github.com'
+          cp sbsslim.woff2 docs
+          git add docs
+          git commit -m "From Github Actions: automatically release the latest font"
+          git push
       - name: Build project # This would actually build your project, using zip for an example artifact
         run: |
           zip font_files *.ttf *.woff *.woff2 *.otf

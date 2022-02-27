@@ -7,3 +7,5 @@ venv
 *.afm
 *.zip
 homework
+.DS_Store
+sample.pdf

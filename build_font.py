@@ -11,6 +11,8 @@ for p in svgFilePaths:
 	glyph.importOutlines(str(p))
 	glyph.left_side_bearing=60
 	glyph.right_side_bearing=60
+	glyph.width=450
+	#print(glyph.width)
 
 
 name = 'SbsSlim'
@@ -57,6 +59,15 @@ for p in svgFilePaths:
 	glyph.importOutlines(str(p))
 	glyph.left_side_bearing=60
 	glyph.right_side_bearing=60
+
+------
+#include <iostream>
+using namespace std;
+
+int main() {
+  cout << "Hello World!";
+  return 0;
+}
 """
 font.printSample('fontsample', (12, 16, 24, 36), sample_text, 'sample.pdf')
 
