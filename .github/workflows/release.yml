@@ -28,7 +28,7 @@ jobs:
           cp SbsSlim.woff2 docs
           ls 
           ls docs
-          git add docs
+          git add ./docs/SbsSlim.woff2
           git status
           git commit -m "From Github Actions: automatically release the latest font"
           git push
