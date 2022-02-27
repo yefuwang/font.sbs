@@ -25,8 +25,7 @@ jobs:
         run: |
           git config --global user.name 'Yefu Wang'
           git config --global user.email 'yefuwang@users.noreply.github.com'
-          ls
-          cp sbsslim.woff2 docs
+          cp SbsSlim.woff2 docs
           git add docs
           git commit -m "From Github Actions: automatically release the latest font"
           git push
