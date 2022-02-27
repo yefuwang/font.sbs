@@ -26,10 +26,7 @@ jobs:
           git config --global user.name 'Yefu Wang'
           git config --global user.email 'yefuwang@users.noreply.github.com'
           cp SbsSlim.woff2 docs
-          ls 
-          ls docs
-          git add ./docs/SbsSlim.woff2
-          git status
+          git add -f ./docs/SbsSlim.woff2
           git commit -m "From Github Actions: automatically release the latest font"
           git push
       - name: Build project # This would actually build your project, using zip for an example artifact
