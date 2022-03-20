@@ -13,13 +13,22 @@ pre > code {
 .common {
     color: #333;
     position: relative;
-    margin: 0 auto;
+    margin: 1em auto 1em auto;
     padding: 20px;
     font-size: 30px;
-    box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
+    background: var(--clay-background,rgba(0,0,0,.005));
+    border-radius: 18px;
+    box-shadow: var(--clay-shadow-outset,8px 8px 16px 0 rgba(0,0,0,.25)),inset var(--clay-shadow-inset-primary,-8px -8px 16px 0 rgba(0,0,0,.25)),inset var(--clay-shadow-inset-secondary,8px 8px 16px 0 hsla(0,0%,100%,.2));
 }
 .card  {
     height: 100%;
+    background: var(--clay-background,rgba(0,0,0,.005));
+    border-radius: var(--clay-border-radius,32px);
+    box-shadow: var(--clay-shadow-outset,8px 8px 16px 0 rgba(0,0,0,.25)),inset var(--clay-shadow-inset-primary,-8px -8px 16px 0 rgba(0,0,0,.25)),inset var(--clay-shadow-inset-secondary,8px 8px 16px 0 hsla(0,0%,100%,.2));
+}
+
+.card-header:first-child {
+    border-radius: var(--clay-border-radius,36px) var(--clay-border-radius,36px) 0 0;
 }
 
 .example {
