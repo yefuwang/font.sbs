@@ -9,3 +9,4 @@ venv
 homework
 .DS_Store
 sample.pdf
+test/*.jpg

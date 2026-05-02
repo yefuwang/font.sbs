@@ -1,16 +1,28 @@
 import fontforge
 from pathlib import Path
+import xml.etree.ElementTree as ET
 
 font = fontforge.font() # new font
+test_dir = Path("test")
+test_dir.mkdir(exist_ok=True)
 
 svgFilePaths = list(Path('SVG').glob('**/*.svg'))
+
+drawing_elements = {"path", "rect", "ellipse", "circle", "line", "polygon", "polyline"}
+
+def has_outlines(path):
+	root = ET.parse(path).getroot()
+	for element in root.iter():
+		tag = element.tag.rsplit("}", 1)[-1]
+		if tag in drawing_elements:
+			return True
+	return False
 
 for p in svgFilePaths:
 	dec = p.stem.split(" ", 1)[0]
 	glyph = font.createChar(int(dec))
-	glyph.importOutlines(str(p))
-	glyph.left_side_bearing=60
-	glyph.right_side_bearing=60
+	if has_outlines(p):
+		glyph.importOutlines(str(p))
 	glyph.width=450
 	#print(glyph.width)
 
@@ -31,7 +43,7 @@ font.generate(f'{name}.woff2')
 # print samples
 fontforge.printSetup('pdf-file', 'z.pdf', 600, 200)
 font.selection.select(("unicode","ranges"),ord('A'),ord('Z'))
-sample_text = """
+sample_text = r"""
 
  	!	"	#	$	%	&	'	(	)	*	+	,	-	.	/
 0	1	2	3	4	5	6	7	8	9	:	;	<	=	>	?
@@ -77,4 +89,4 @@ from pdf2image import convert_from_path
 # Store Pdf with convert_from_path function
 images = convert_from_path('sample.pdf')
 for i in range(len(images)):
-    images[i].save('page'+ str(i) +'.jpg', 'JPEG')
+    images[i].save(test_dir / f'page{i}.jpg', 'JPEG')
