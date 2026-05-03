@@ -32,9 +32,6 @@ jobs:
           git add -f ./docs/SbsSlim.*
           git commit -m "From Github Actions: automatically release the latest font"
           git push
-      - name: Build project # This would actually build your project, using zip for an example artifact
-        run: |
-          zip font_files *.ttf *.woff *.woff2 *.otf
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -45,23 +42,43 @@ jobs:
           release_name: Release ${{ steps.vars.outputs.sha_short }}
           draft: false
           prerelease: false
-      - name: Upload Release Asset
-        id: upload-release-asset 
+      - name: Upload TTF
+        id: upload-ttf
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./font_files.zip
-          asset_name: font_files.zip
-          asset_content_type: application/zip
-      - name: Upload Sample Image
-        id: upload-sample-img 
+          asset_path: ./SbsSlim.ttf
+          asset_name: SbsSlim.ttf
+          asset_content_type: font/ttf
+      - name: Upload OTF
+        id: upload-otf
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./test/page0.jpg
-          asset_name: sample.jpg
-          asset_content_type: image/jpeg
+          asset_path: ./SbsSlim.otf
+          asset_name: SbsSlim.otf
+          asset_content_type: font/otf
+      - name: Upload WOFF
+        id: upload-woff
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./SbsSlim.woff
+          asset_name: SbsSlim.woff
+          asset_content_type: font/woff
+      - name: Upload WOFF2
+        id: upload-woff2
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./SbsSlim.woff2
+          asset_name: SbsSlim.woff2
+          asset_content_type: font/woff2
